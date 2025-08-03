@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'montserrat', sans-serif;
+}
+
+h1 {
+    font-size: 62px;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+h6 {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'roboto', sans-serif;
+    background-color: #F5f5f5;
+    color: #272727;
+    background: #ffffff;
+
+    /* overflow-x: hidden; */
+}
+
+img {
+    width: 100%;
+}
+
+section {
+    padding: 100px 30px;
+}
