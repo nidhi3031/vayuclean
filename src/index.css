@@ -49,3 +49,9 @@ img {
 section {
     padding: 100px 30px;
 }
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: white; /* Change to your desired color */
+  opacity: 0.8;
+}

@@ -1,5 +1,11 @@
 import Banner from "../components/Banner";
+import Brands from "../components/Brands";
+import Certification from "../components/Certification";
+import Footer from "../components/Footer";
 import Header from "../components/Header";
+import HomeFaqs from "../components/HomeFaqs";
+import ProductLine from "../components/ProductLine";
+import ProductSlider from "../components/ProductSlider";
 import ScrollToTop from "../components/ScrollToTop";
 
 const Home = () => {
@@ -8,6 +14,12 @@ const Home = () => {
       <ScrollToTop />
       <Header />
       <Banner />
+      <ProductLine />
+      <ProductSlider />
+      <Certification/>
+    <Brands />
+    <HomeFaqs />
+    < Footer />
     </div>
   );
 };

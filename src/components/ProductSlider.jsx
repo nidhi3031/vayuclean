@@ -39,8 +39,12 @@ const ProductSlider = () => {
   const nextRef = useRef(null);
 
   return (
-    <section className="py-12">
+    <section>
       <div className="container mx-auto px-4">
+       <div className="text-center">
+          <h2>Our Product Line</h2>
+          <p>Comprehensive solutions covering every aspect of pharmaceutical manufacturing, from raw materials to finished products.</p>
+        </div>
 
         {/* Arrows aligned right above cards */}
         <div className="flex justify-end items-center mb-4 gap-2">
