@@ -20,7 +20,7 @@ const products = [
 
 const ProductLine = () => {
   return (
-    <section id="products" className="py-16 bg-gray-100">
+    <section id="products">
       <div className="max-w-7xl mx-auto px-6">
         <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-10">
           Our Product Line

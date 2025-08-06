@@ -1,7 +1,7 @@
 import { Mail, Phone } from 'lucide-react';
 import { BgCta } from '../utils/utils';
 
-const HomeCta = () => {
+const Cta = () => {
   return (
     <section
       className="relative bg-gray-50  px-6 md:px-12"
@@ -99,4 +99,4 @@ const HomeCta = () => {
   );
 };
 
-export default HomeCta;
+export default Cta;

@@ -3,8 +3,11 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ReactLenis, { useLenis } from "lenis/react";
 
 import { Toaster } from "react-hot-toast";
-import Home from "./Pages/Home";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
 import ScrollToTop from "./components/ScrollToTop";
+import About from "./Pages/About";
+import Home from "./Pages/Home";
 
 const App = () => {
   const lenis = useLenis(({ scroll }) => {
@@ -16,10 +19,12 @@ const App = () => {
       <ReactLenis root>
         <BrowserRouter>
           <ScrollToTop />
+          <Header/>
           <Routes>
             <Route index element={<Home />} />
-            
+            <Route path="/about" element= {<About />} />
           </Routes>
+          <Footer />
         </BrowserRouter>
       </ReactLenis>
       <Toaster
