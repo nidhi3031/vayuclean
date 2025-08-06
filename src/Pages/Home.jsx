@@ -2,7 +2,6 @@ import Banner from "../components/Banner";
 import Brands from "../components/Brands";
 import Certification from "../components/Certification";
 import Cta from "../components/Cta";
-import Footer from "../components/Footer";
 import Header from "../components/Header";
 import HomeFaqs from "../components/HomeFaqs";
 import ProductLine from "../components/ProductLine";
@@ -21,7 +20,6 @@ const Home = () => {
       <Cta />
     <Brands />
     <HomeFaqs />
-    < Footer />
     </div>
   );
 };
