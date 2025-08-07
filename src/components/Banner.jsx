@@ -6,6 +6,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import { Download, Mail, Phone } from "lucide-react";
 import { VayuBanner } from "../utils/utils";
+import PrimaryButton from "./PrimaryButton";
+import PrimaryHeading from "./PrimaryHeading";
+import Description from "./Description";
 
 const banners = [VayuBanner, VayuBanner, VayuBanner];
 
@@ -36,17 +39,15 @@ const Banner = () => {
 
       {/* Main Content */}
       <div className="relative z-20 text-white px-4 max-w-5xl">
-        <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
+        <PrimaryHeading className="mb-5">
           Your Partner for Cleanroom Manufacturing
-        </h1>
-        <p className="text-base sm:text-lg md:text-xl mb-4 sm:mb-6 px-2 sm:px-0">
+        </PrimaryHeading>
+        <Description className="text-white mb-7 lg:max-w-3xl mx-auto">
           From isolators to AHUs, we deliver turnkey cleanroom systems that
           support safe, compliant, and efficient pharmaceutical manufacturing.
-        </p>
-        <div className="flex flex-col gap-3 sm:gap-4 justify-center w-[90%] sm:w-[70%] md:w-[50%] lg:w-[40%] mx-auto">
-          <button className="bg-cyan-400 hover:bg-cyan-500 text-white px-4 py-3 sm:py-4 rounded-[8px] font-semibold text-sm sm:text-base">
-            Explore Products
-          </button>
+        </Description>
+        <div className="flex justify-center items-center gap-12">
+          <PrimaryButton to="/products">Explore Products</PrimaryButton>
           <a
             href="/catalogue.pdf"
             download

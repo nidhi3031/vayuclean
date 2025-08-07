@@ -8,6 +8,8 @@ import Header from "./components/Header";
 import ScrollToTop from "./components/ScrollToTop";
 import About from "./Pages/About";
 import Home from "./Pages/Home";
+import Products from "./Pages/Products";
+import ProductDetail from "./Pages/ProductDetail";
 
 const App = () => {
   const lenis = useLenis(({ scroll }) => {
@@ -19,10 +21,12 @@ const App = () => {
       <ReactLenis root>
         <BrowserRouter>
           <ScrollToTop />
-          <Header/>
+          <Header />
           <Routes>
             <Route index element={<Home />} />
-            <Route path="/about" element= {<About />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/products/:id" element={<ProductDetail />} />
           </Routes>
           <Footer />
         </BrowserRouter>

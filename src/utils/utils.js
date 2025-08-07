@@ -8,10 +8,18 @@ import Productcard from "../assets/product-card.png";
 import Quality from "../assets/quality.svg";
 import VayuBanner from "../assets/vayubanner.png";
 import VayuLogo from "../assets/vayulogo.svg";
+import LogoTwo from "../assets/growin-logo.svg";
 
 export {
-  BgCta, Blacklogo, Card1, check, Customer,
-  Innovation, Productcard, Quality, VayuBanner,
-  VayuLogo
+  BgCta,
+  Blacklogo,
+  Card1,
+  check,
+  Customer,
+  Innovation,
+  Productcard,
+  Quality,
+  VayuBanner,
+  VayuLogo,
+  LogoTwo,
 };
-
