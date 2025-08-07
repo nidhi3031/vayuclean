@@ -16,10 +16,10 @@ const Home = () => {
       <Banner />
       <ProductLine />
       <ProductSlider />
-      <Certification/>
+      <Certification />
       <Cta />
-    <Brands />
-    <HomeFaqs />
+      <Brands />
+      <HomeFaqs />
     </div>
   );
 };

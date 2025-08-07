@@ -1,35 +1,43 @@
-import { MoveLeft, MoveRight } from 'lucide-react';
-import { useRef } from 'react';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import { Navigation } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Productcard } from '../utils/utils'; // Make sure this is an image
+import { MoveLeft, MoveRight } from "lucide-react";
+import { useRef } from "react";
+import "swiper/css";
+import "swiper/css/navigation";
+import { Navigation } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Productcard } from "../utils/utils"; // Make sure this is an image
+import Description from "./Description";
+import SectionTitle from "./SectionTitle";
+import PrimaryButton from "./PrimaryButton";
 
 const productData = [
   {
-    title: 'Laminar Air Flow Unit',
-    description: 'Widely used in microbiology labs, quality control, and aseptic processing.',
+    title: "Laminar Air Flow Unit",
+    description:
+      "Widely used in microbiology labs, quality control, and aseptic processing.",
     image: Productcard,
   },
   {
-    title: 'Bio Safety Cabinet',
-    description: 'Essential in handling biological samples, especially in R&D and diagnostics.',
+    title: "Bio Safety Cabinet",
+    description:
+      "Essential in handling biological samples, especially in R&D and diagnostics.",
     image: Productcard,
   },
   {
-    title: 'Pass Box (Static & Dynamic)',
-    description: 'Crucial for contamination-free material transfer in cleanroom environments.',
+    title: "Pass Box (Static & Dynamic)",
+    description:
+      "Crucial for contamination-free material transfer in cleanroom environments.",
     image: Productcard,
   },
   {
-    title: 'Air Shower',
-    description: 'High-demand pre-entry solution for particulate removal before entering clean zones.',
+    title: "Air Shower",
+    description:
+      "High-demand pre-entry solution for particulate removal before entering clean zones.",
     image: Productcard,
   },
   {
-    title: 'Fume Hood',
-    description: 'Common in R&D and chemical testing areas to ensure safe ventilation.',
+    title: "Fume Hood",
+    description:
+      "Common in R&D and chemical testing areas to ensure safe ventilation.",
     image: Productcard,
   },
 ];
@@ -41,9 +49,19 @@ const ProductSlider = () => {
   return (
     <section>
       <div className="container mx-auto px-4">
-       <div className="text-center">
-          <h2>Our Product Line</h2>
-          <p>Comprehensive solutions covering every aspect of pharmaceutical manufacturing, from raw materials to finished products.</p>
+        <div className="text-center">
+          <SectionTitle className="mb-6 text-center">
+            Our Product Line
+          </SectionTitle>
+          <Description className="lg:max-w-3xl mx-auto mb-5">
+            Comprehensive solutions covering every aspect of pharmaceutical
+            manufacturing, from raw materials to finished products.
+          </Description>
+          {/* <h2>Our Product Line</h2>
+          <p>
+            Comprehensive solutions covering every aspect of pharmaceutical
+            manufacturing, from raw materials to finished products.
+          </p> */}
         </div>
 
         {/* Arrows aligned right above cards */}
@@ -52,13 +70,13 @@ const ProductSlider = () => {
             ref={prevRef}
             className="w-12 h-10 rounded-[7px] bg-primary hover:text-blue-500 flex items-center justify-center text-blue-600 text-lg"
           >
-          <MoveLeft className="w-6 h-6 text-white" />
+            <MoveLeft className="w-6 h-6 text-white" />
           </button>
           <button
             ref={nextRef}
             className="w-12 h-10 rounded-[7px] bg-primary hover:text-blue-500 flex items-center justify-center text-blue-600 text-lg"
           >
-           <MoveRight className="w-6 h-6 text-white" />
+            <MoveRight className="w-6 h-6 text-white" />
           </button>
         </div>
 
@@ -102,11 +120,9 @@ const ProductSlider = () => {
         </Swiper>
 
         {/* View more button */}
-       <div className="flex justify-center">
-  <button className="mt-6 px-5 py-2 border border-blue-500 text-blue-500 rounded-md hover:bg-blue-50 text-center">
-    View more
-  </button>
-</div>
+        <div className="flex justify-center mt-5">
+          <PrimaryButton to="/products"> View more</PrimaryButton>
+        </div>
       </div>
     </section>
   );

@@ -3,7 +3,7 @@ import React from "react";
 const Section = ({ children, className = "", bgImage, ...rest }) => {
   return (
     <section
-      className={`relative py-24 px-4 sm:px-6 lg:px-8 ${className}`}
+      className={`relative py-24 px-4 sm:px-6 lg:px-24 ${className}`}
       style={
         bgImage
           ? {
