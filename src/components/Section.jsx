@@ -17,7 +17,7 @@ const Section = ({ children, className = "", bgImage, ...rest }) => {
     >
       {/* Overlay */}
       {bgImage && (
-        <div className="absolute inset-0 bg-black/30 z-0" aria-hidden="true" />
+        <div className="absolute inset-0 bg-black/50 z-0" aria-hidden="true" />
       )}
 
       {/* Content */}

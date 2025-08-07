@@ -51,7 +51,7 @@ const Banner = () => {
           <a
             href="/catalogue.pdf"
             download
-            className="inline-flex items-center justify-center gap-2 text-primary hover:text-cyan-200 font-semibold transition duration-200 text-sm sm:text-base"
+            className="inline-flex items-center justify-center gap-2 text-primary hover:text-[#009dbb] font-semibold transition duration-200 text-sm sm:text-base"
           >
             <Download className="w-4 h-4" />
             Download Catalogue
@@ -61,13 +61,13 @@ const Banner = () => {
 
       {/* Bottom Info */}
       <div>
-        <div className="absolute text-start bottom-10 left-4 sm:left-10 flex flex-col md:flex-row gap-2 sm:gap-6 text-xs sm:text-sm text-cyan-300 z-20">
+        <div className="absolute text-start bottom-10 left-4 sm:left-10 flex flex-col md:flex-row gap-2 sm:gap-6 text-xs sm:text-sm text-primary z-20">
           <h6>ISO 9001 Certified</h6>
           <h6>500+ Clients</h6>
           <h6>5+ Years</h6>
         </div>
 
-        <div className="absolute text-start bottom-10 right-4 sm:right-10 flex flex-col md:flex-row gap-3 sm:gap-6 text-xs sm:text-sm text-white z-20">
+        <div className="absolute text-start bottom-10 right-4 sm:right-10 flex flex-col md:flex-row gap-3 sm:gap-6 text-xs sm:text-sm text-primary z-20">
           <a
             href="tel:+91123456789"
             className="flex items-center gap-2 hover:underline cursor-pointer"

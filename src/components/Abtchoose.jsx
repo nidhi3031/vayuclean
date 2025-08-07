@@ -2,6 +2,7 @@ import { Check } from "lucide-react";
 import { Card1 } from "../utils/utils";
 import SectionTitle from "./SectionTitle";
 import Description from "./Description";
+import Section from "./Section";
 const points = [
   "Over 5 years of trusted industry experience",
   "500+ successful projects with leading pharma brands",
@@ -12,41 +13,37 @@ const points = [
 
 const Abtchoose = () => {
   return (
-    <section>
-      <div className="container">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
-          {/* Right side - Text content */}
-          <div className="max-w-5xl mx-auto text-left py-16 px-6">
-            <SectionTitle className="mb-5"> Why Choose Us</SectionTitle>
+    <Section className="bg-gray">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+        {/* Right side - Text content */}
+        <div className="max-w-5xl mx-auto text-left py-16 px-6">
+          <SectionTitle className="mb-5"> Why Choose Us</SectionTitle>
 
-            <Description className="mb-6">
-              At Vayuclean, we go beyond providing equipment — we deliver
-              precision-engineered solutions tailored to pharmaceutical,
-              biotech, and cleanroom environments.
-            </Description>
+          <Description className="mb-6">
+            At Vayuclean, we go beyond providing equipment — we deliver
+            precision-engineered solutions tailored to pharmaceutical, biotech,
+            and cleanroom environments.
+          </Description>
 
-            <ul className="space-y-3">
-              {points.map((point, index) => (
-                <li
-                  key={index}
-                  className="flex items-start gap-3 text-gray-700"
-                >
-                  <Check className="w-5 h-5 text-[#00B8D9] mt-1" />
-                  <span>{point}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-          {/* Left side - Image */}
-          <div>
-            <img
-              src={Card1}
-              alt="Cleanroom Manufacturing"
-              className="rounded-lg shadow-lg object-cover w-full h-full max-h-[450px]"
-            />
-          </div>
+          <ul className="space-y-3">
+            {points.map((point, index) => (
+              <li key={index} className="flex items-start gap-3 text-gray-700">
+                <Check className="w-5 h-5 text-primary mt-1" />
+                <span>{point}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        {/* Left side - Image */}
+        <div>
+          <img
+            src={Card1}
+            alt="Cleanroom Manufacturing"
+            className="rounded-lg shadow-lg object-cover w-full h-full max-h-[450px]"
+          />
         </div>
       </div>
+
       {/* missionvision */}
       <div className="max-w-6xl mx-auto flex justify-between gap-x-6 pt-20">
         {/* Mission Box */}
@@ -69,7 +66,7 @@ const Abtchoose = () => {
           </p>
         </div>
       </div>
-    </section>
+    </Section>
   );
 };
 

@@ -1,20 +1,22 @@
 import { Mail, Phone } from "lucide-react";
 import { BgCta } from "../utils/utils";
 import Section from "./Section";
+import SectionTitle from "./SectionTitle";
+import Description from "./Description";
 
 const Cta = () => {
   return (
     <Section bgImage={BgCta}>
-      {/* Background blur */}
+      <div className="md:max-w-2xl">
+        <div className=" mb-10">
+          <SectionTitle className="mb-3">Get in Touch</SectionTitle>
+          <Description>
+            Ready to discuss your pharmaceutical equipment needs? Share your
+            contact details and our experts will reach out within 24 hours.
+          </Description>
+        </div>
 
-      <div className="max-w-3xl">
-        <h2 className="text-2xl font-bold mb-4">Get in Touch</h2>
-        <p className="mb-8">
-          Ready to discuss your pharmaceutical equipment needs? Share your
-          contact details and our experts will reach out within 24 hours.
-        </p>
-
-        <form className="space-y-6 max-w-md">
+        <form className="space-y-6">
           <div>
             <label className="block font-semibold mb-1" htmlFor="name">
               Name
@@ -40,20 +42,6 @@ const Cta = () => {
           </div>
 
           <div className="flex space-x-2">
-            <div className="w-20">
-              <label
-                className="block font-semibold mb-1"
-                htmlFor="country-code"
-              >
-                Code
-              </label>
-              <input
-                id="country-code"
-                type="text"
-                defaultValue="+91"
-                className="w-full border border-gray-300 rounded-md px-4 py-2 text-center focus:outline-none focus:ring-2 focus:ring-blue-400"
-              />
-            </div>
             <div className="flex-1">
               <label className="block font-semibold mb-1" htmlFor="mobile">
                 Mobile number

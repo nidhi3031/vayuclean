@@ -3,7 +3,11 @@ import { Blacklogo, LogoTwo } from "../utils/utils";
 const Footer = () => {
   return (
     <footer className="bg-black text-white pt-10 pb-4 rounded-t-3xl px-12">
-      <img src={LogoTwo} alt="VayuClean Logo" className="max-w-7xl w-40 mb-8" />
+      <img
+        src={Blacklogo}
+        alt="VayuClean Logo"
+        className="max-w-7xl w-40 mb-8"
+      />
       <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-10 mb-6">
         {/* Empty Logo Space + Quick Links below */}
         <div>

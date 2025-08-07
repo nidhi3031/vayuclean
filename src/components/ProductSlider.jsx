@@ -8,6 +8,7 @@ import { Productcard } from "../utils/utils"; // Make sure this is an image
 import Description from "./Description";
 import SectionTitle from "./SectionTitle";
 import PrimaryButton from "./PrimaryButton";
+import Section from "./Section";
 
 const productData = [
   {
@@ -47,84 +48,86 @@ const ProductSlider = () => {
   const nextRef = useRef(null);
 
   return (
-    <section>
-      <div className="container mx-auto px-4">
-        <div className="text-center">
-          <SectionTitle className="mb-6 text-center">
-            Our Product Line
-          </SectionTitle>
-          <Description className="lg:max-w-3xl mx-auto mb-5">
-            Comprehensive solutions covering every aspect of pharmaceutical
-            manufacturing, from raw materials to finished products.
-          </Description>
-          {/* <h2>Our Product Line</h2>
+    <Section className="bg-gray">
+      <section>
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <SectionTitle className="mb-6 text-center">
+              Our Product Line
+            </SectionTitle>
+            <Description className="lg:max-w-3xl mx-auto mb-5">
+              Comprehensive solutions covering every aspect of pharmaceutical
+              manufacturing, from raw materials to finished products.
+            </Description>
+            {/* <h2>Our Product Line</h2>
           <p>
             Comprehensive solutions covering every aspect of pharmaceutical
             manufacturing, from raw materials to finished products.
           </p> */}
-        </div>
+          </div>
 
-        {/* Arrows aligned right above cards */}
-        <div className="flex justify-end items-center mb-4 gap-2">
-          <button
-            ref={prevRef}
-            className="w-12 h-10 rounded-[7px] bg-primary hover:text-blue-500 flex items-center justify-center text-blue-600 text-lg"
-          >
-            <MoveLeft className="w-6 h-6 text-white" />
-          </button>
-          <button
-            ref={nextRef}
-            className="w-12 h-10 rounded-[7px] bg-primary hover:text-blue-500 flex items-center justify-center text-blue-600 text-lg"
-          >
-            <MoveRight className="w-6 h-6 text-white" />
-          </button>
-        </div>
+          {/* Arrows aligned right above cards */}
+          <div className="flex justify-end items-center mb-4 gap-2">
+            <button
+              ref={prevRef}
+              className="w-12 h-10 rounded-[7px] bg-primary hover:text-blue-500 flex items-center justify-center text-blue-600 text-lg"
+            >
+              <MoveLeft className="w-6 h-6 text-white" />
+            </button>
+            <button
+              ref={nextRef}
+              className="w-12 h-10 rounded-[7px] bg-primary hover:text-blue-500 flex items-center justify-center text-blue-600 text-lg"
+            >
+              <MoveRight className="w-6 h-6 text-white" />
+            </button>
+          </div>
 
-        {/* Swiper */}
-        <Swiper
-          modules={[Navigation]}
-          spaceBetween={20}
-          slidesPerView={1}
-          loop={true}
-          navigation={{
-            prevEl: prevRef.current,
-            nextEl: nextRef.current,
-          }}
-          onInit={(swiper) => {
-            swiper.params.navigation.prevEl = prevRef.current;
-            swiper.params.navigation.nextEl = nextRef.current;
-            swiper.navigation.init();
-            swiper.navigation.update();
-          }}
-          breakpoints={{
-            640: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
-            1280: { slidesPerView: 4 },
-          }}
-        >
-          {productData.map((item, index) => (
-            <SwiperSlide key={index}>
-              <div className="rounded-xl overflow-hidden border border-gray-200 bg-white shadow-sm min-w-[250px]">
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="w-full h-46 object-cover"
-                />
-                <div className="p-4">
-                  <h3 className="font-medium mb-3">{item.title}</h3>
-                  <p className=" text-gray-600">{item.description}</p>
+          {/* Swiper */}
+          <Swiper
+            modules={[Navigation]}
+            spaceBetween={20}
+            slidesPerView={1}
+            loop={true}
+            navigation={{
+              prevEl: prevRef.current,
+              nextEl: nextRef.current,
+            }}
+            onInit={(swiper) => {
+              swiper.params.navigation.prevEl = prevRef.current;
+              swiper.params.navigation.nextEl = nextRef.current;
+              swiper.navigation.init();
+              swiper.navigation.update();
+            }}
+            breakpoints={{
+              640: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+              1280: { slidesPerView: 4 },
+            }}
+          >
+            {productData.map((item, index) => (
+              <SwiperSlide key={index}>
+                <div className="rounded-xl overflow-hidden border border-gray-200 bg-white shadow-sm min-w-[250px]">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-46 object-cover"
+                  />
+                  <div className="p-4">
+                    <h3 className="font-medium mb-3">{item.title}</h3>
+                    <p className=" text-gray-600">{item.description}</p>
+                  </div>
                 </div>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+              </SwiperSlide>
+            ))}
+          </Swiper>
 
-        {/* View more button */}
-        <div className="flex justify-center mt-5">
-          <PrimaryButton to="/products"> View more</PrimaryButton>
+          {/* View more button */}
+          <div className="flex justify-center mt-5">
+            <PrimaryButton to="/products"> View more</PrimaryButton>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </Section>
   );
 };
 

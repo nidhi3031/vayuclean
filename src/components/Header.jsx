@@ -12,7 +12,7 @@ const Header = () => {
     <nav className="bg-white shadow-md py-2 px-6 flex items-center justify-between fixed w-full top-0 z-50">
       {/* Logo */}
       <Link to="/" className="flex items-center">
-        <img src={LogoTwo} alt="VayuClean Logo" className="h-14 mr-2" />
+        <img src={VayuLogo} alt="VayuClean Logo" className="h-14 mr-2" />
       </Link>
 
       {/* Desktop Menu */}

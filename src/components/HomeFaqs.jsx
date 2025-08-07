@@ -1,26 +1,29 @@
-import { Minus, Plus } from 'lucide-react';
-import { useState } from 'react';
+import { Minus, Plus } from "lucide-react";
+import { useState } from "react";
+import Section from "./Section";
+import SectionTitle from "./SectionTitle";
 
 const faqData = [
   {
-    question: 'What types of pharmaceutical machines does VayuClean Technologies offer?',
+    question:
+      "What types of pharmaceutical machines does VayuClean Technologies offer?",
     answer:
-      'VayuClean Technologies offers laminar air flow units, biosafety cabinets, air showers, pass boxes, fume hoods, and more for pharmaceutical environments.',
+      "VayuClean Technologies offers laminar air flow units, biosafety cabinets, air showers, pass boxes, fume hoods, and more for pharmaceutical environments.",
   },
   {
-    question: 'How does VayuClean ensure equipment quality?',
+    question: "How does VayuClean ensure equipment quality?",
     answer:
-      'All our equipment complies with ISO standards and undergoes rigorous testing and quality checks.',
+      "All our equipment complies with ISO standards and undergoes rigorous testing and quality checks.",
   },
   {
-    question: 'Can I request a custom machine design?',
+    question: "Can I request a custom machine design?",
     answer:
-      'Yes, we provide tailored solutions based on your lab or facility requirements. Contact us to discuss your needs.',
+      "Yes, we provide tailored solutions based on your lab or facility requirements. Contact us to discuss your needs.",
   },
   {
-    question: 'What is the typical delivery time?',
+    question: "What is the typical delivery time?",
     answer:
-      'Delivery times vary by product but generally range from 2 to 6 weeks depending on specifications and quantity.',
+      "Delivery times vary by product but generally range from 2 to 6 weeks depending on specifications and quantity.",
   },
 ];
 
@@ -32,17 +35,17 @@ const HomeFaqs = () => {
   };
 
   return (
-    <section className="py-12 px-4  mx-auto bg-white">
-      <h2 className="font-bold text-center mb-6">FAQ</h2>
+    <Section className="bg-gray">
+      <SectionTitle className="text-center mb-10 ">FAQ</SectionTitle>
 
-      <div className='px-20'>
+      <div className="px-20">
         {faqData.map((item, index) => {
           const isOpen = activeIndex === index;
           return (
             <div
               key={index}
               className={`rounded-lg border px-4 py-3 mb-4 transition-all duration-200 ${
-                isOpen ? 'border-blue-400' : 'border-gray-300'
+                isOpen ? "border-blue-400" : "border-gray-300"
               }`}
             >
               <button
@@ -62,7 +65,7 @@ const HomeFaqs = () => {
           );
         })}
       </div>
-    </section>
+    </Section>
   );
 };
 

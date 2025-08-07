@@ -10,6 +10,7 @@ import About from "./Pages/About";
 import Home from "./Pages/Home";
 import Products from "./Pages/Products";
 import ProductDetail from "./Pages/ProductDetail";
+import ContactUs from "./Pages/ContactUs";
 
 const App = () => {
   const lenis = useLenis(({ scroll }) => {
@@ -27,6 +28,7 @@ const App = () => {
             <Route path="/about" element={<About />} />
             <Route path="/products" element={<Products />} />
             <Route path="/products/:id" element={<ProductDetail />} />
+            <Route path="/contact" element={<ContactUs />} />
           </Routes>
           <Footer />
         </BrowserRouter>
