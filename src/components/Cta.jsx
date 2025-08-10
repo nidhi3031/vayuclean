@@ -1,14 +1,15 @@
 import { Mail, Phone } from "lucide-react";
-import { BgCta } from "../utils/utils";
+import { BgCta, VayuBanner } from "../utils/utils";
 import Section from "./Section";
 import SectionTitle from "./SectionTitle";
 import Description from "./Description";
+import ContactForm from "./ContactForm";
 
 const Cta = () => {
   return (
     <Section bgImage={BgCta}>
       <div className="md:max-w-2xl">
-        <div className=" mb-10">
+        <div className=" mb-20 text-white">
           <SectionTitle className="mb-3">Get in Touch</SectionTitle>
           <Description>
             Ready to discuss your pharmaceutical equipment needs? Share your
@@ -16,7 +17,7 @@ const Cta = () => {
           </Description>
         </div>
 
-        <form className="space-y-6">
+        {/* <form className="space-y-6">
           <div>
             <label className="block font-semibold mb-1" htmlFor="name">
               Name
@@ -61,7 +62,9 @@ const Cta = () => {
           >
             Submit
           </button>
-        </form>
+        </form> */}
+
+        <ContactForm variant="dark" />
 
         <div className="flex space-x-12 mt-10 max-w-md">
           <div>
@@ -69,16 +72,16 @@ const Cta = () => {
               <Phone size={18} />
               <span>Phone no.</span>
             </div>
-            <p>+91 123456789</p>
-            <p>+91 123456789</p>
+            <p className="text-white">+91 123456789</p>
+            <p className="text-white">+91 123456789</p>
           </div>
           <div>
             <div className="flex items-center gap-1 text-blue-400 font-semibold mb-1">
               <Mail size={18} />
               <span>E-mail</span>
             </div>
-            <p>Sachin.tiwari@vayumail.com</p>
-            <p>Sachin.tiwari@vayumail.com</p>
+            <p className="text-white">Sachin.tiwari@vayumail.com</p>
+            <p className="text-white">Sachin.tiwari@vayumail.com</p>
           </div>
         </div>
       </div>

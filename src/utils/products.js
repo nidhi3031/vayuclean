@@ -1,63 +1,65 @@
 // src/utils/products.js
 
+import { VayuBanner } from "./utils";
+
 export const products = [
   {
     id: 1,
     name: "Laminar Air Flow Unit",
+    slug: "laminar-air-flow-unit",
     description:
       "Widely used in microbiology labs, quality control, and aseptic processing.",
-    price: 120,
     category: "Electronics",
-    image: "https://picsum.photos/300/200?random=1",
+    image: VayuBanner,
   },
   {
     id: 2,
     name: "Air Handling Unit",
+    slug: "air-handling-unit",
     description:
       "Controls air flow and quality in cleanrooms with high efficiency.",
-    price: 199,
     category: "Wearables",
     image: "https://picsum.photos/300/200?random=2",
   },
   {
     id: 3,
     name: "Modular Cleanroom",
+    slug: "modular-cleanroom",
     description:
       "Custom cleanroom structures designed for pharmaceutical environments.",
-    price: 1200,
     category: "Computers",
     image: "https://picsum.photos/300/200?random=3",
   },
   {
     id: 4,
     name: "Bio Safety Cabinet",
+    slug: "bio-safety-cabinet",
     description:
       "Essential in handling biological samples, especially in R&D and diagnostics.",
-    price: 75,
     category: "Electronics",
     image: "https://picsum.photos/300/200?random=4",
   },
   {
     id: 5,
     name: "Pass Box (Static & Dynamic)",
+    slug: "pass-box-static-dynamic",
     description:
       "Crucial for contamination-free material transfer in cleanroom environments.",
-    price: 450,
     category: "Photography",
     image: "https://picsum.photos/300/200?random=5",
   },
   {
     id: 6,
     name: "Air Shower",
+    slug: "air-shower",
     description:
       "High-demand pre-entry solution for particulate removal before entering clean zones.",
-    price: 150,
     category: "Furniture",
     image: "https://picsum.photos/300/200?random=6",
   },
 ];
 
-// ✅ Add category list separately
+// ✅ Category list separately
 export const categories = [
   "Electronics",
   "Wearables",

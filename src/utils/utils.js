@@ -10,6 +10,8 @@ import VayuBanner from "../assets/vayubanner.png";
 import VayuLogo from "../assets/vayulogo.svg";
 import LogoTwo from "../assets/growin-logo.svg";
 
+const HomeHeroBannerImg = [VayuBanner, VayuBanner];
+
 export {
   BgCta,
   Blacklogo,
@@ -22,4 +24,5 @@ export {
   VayuBanner,
   VayuLogo,
   LogoTwo,
+  HomeHeroBannerImg,
 };

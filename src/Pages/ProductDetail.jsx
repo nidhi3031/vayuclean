@@ -6,8 +6,8 @@ import Section from "../components/Section";
 import SectionTitle from "../components/SectionTitle";
 
 const ProductDetail = () => {
-  const { id } = useParams();
-  const product = products.find((item) => item.id === parseInt(id));
+  const { slug } = useParams();
+  const product = products.find((item) => item.slug === slug);
 
   if (!product) {
     return (
@@ -33,9 +33,7 @@ const ProductDetail = () => {
         <div>
           <SectionTitle className="mb-4">{product.name}</SectionTitle>
           <p className="text-gray-700 mb-4">{product.description}</p>
-          <div className="text-xl font-semibold text-indigo-600 mb-2">
-            ${product.price}
-          </div>
+
           <p className="text-sm text-gray-500">Category: {product.category}</p>
         </div>
       </div>

@@ -43,7 +43,7 @@ const Brands = () => {
         {logos.map((logo, index) => (
           <div
             key={index}
-            className="bg-white border border-gray-200 rounded-md h-20 flex items-center justify-center p-4"
+            className="bg-gray rounded-md h-20 flex items-center justify-center p-4"
           >
             <img
               src={logo}
@@ -55,7 +55,7 @@ const Brands = () => {
       </div>
 
       {/* Button */}
-      <PrimaryButton>Learn More</PrimaryButton>
+      <PrimaryButton to="/coming-soon">Learn More</PrimaryButton>
     </Section>
   );
 };

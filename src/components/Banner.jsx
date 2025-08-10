@@ -1,30 +1,30 @@
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import { Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import { Download, Mail, Phone } from "lucide-react";
-import { VayuBanner } from "../utils/utils";
+import { HomeHeroBannerImg, VayuBanner } from "../utils/utils";
 import PrimaryButton from "./PrimaryButton";
 import PrimaryHeading from "./PrimaryHeading";
 import Description from "./Description";
-
-const banners = [VayuBanner, VayuBanner, VayuBanner];
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 const Banner = () => {
   return (
     <section className="relative w-full h-screen overflow-hidden text-center flex items-center justify-center">
       {/* Swiper Background */}
       <Swiper
-        modules={[Navigation, Pagination]}
-        navigation
+        modules={[Navigation, Pagination, Autoplay]}
         pagination={{ clickable: true }}
         loop={true}
+        autoplay={{
+          delay: 3000, // 3 seconds
+          disableOnInteraction: false, // keep autoplay after user interaction
+        }}
         className="absolute inset-0"
         style={{ zIndex: 0 }}
       >
-        {banners.map((img, idx) => (
+        {HomeHeroBannerImg.map((img, idx) => (
           <SwiperSlide key={idx}>
             <div
               className="w-full h-screen bg-cover bg-center"
@@ -46,7 +46,7 @@ const Banner = () => {
           From isolators to AHUs, we deliver turnkey cleanroom systems that
           support safe, compliant, and efficient pharmaceutical manufacturing.
         </Description>
-        <div className="flex justify-center items-center gap-12">
+        <div className="flex justify-center items-center gap-12 max-md:flex-col max-md:gap-6">
           <PrimaryButton to="/products">Explore Products</PrimaryButton>
           <a
             href="/catalogue.pdf"

@@ -34,7 +34,7 @@ const Abtcard = () => {
         {stats.map((stat, index) => (
           <div
             key={index}
-            className="group bg-white border border-gray-200 rounded-2xl p-10 min-h-[350px] transition-all duration-300 hover:bg-[#00B8D9] hover:text-white flex flex-col justify-between shadow-md hover:shadow-lg"
+            className="group bg-gray rounded-2xl p-10 min-h-[350px] transition-all duration-300 hover:bg-[#00B8D9] hover:text-white flex flex-col justify-between shadow-md hover:shadow-lg"
           >
             <h2 className="text-5xl text-primary font-semibold mb-8 group-hover:text-white transition-colors duration-300">
               {stat.value}
