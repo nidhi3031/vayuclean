@@ -1,6 +1,6 @@
 // src/utils/products.js
 
-import { VayuBanner } from "./utils";
+import { Customer, VayuBanner } from "./utils";
 
 export const products = [
   {
@@ -55,6 +55,14 @@ export const products = [
     description:
       "High-demand pre-entry solution for particulate removal before entering clean zones.",
     category: "Furniture",
+    image: "https://picsum.photos/300/200?random=6",
+  },
+  {
+    id: 7,
+    name: "Test",
+    slug: "test",
+    description: "test description",
+    category: "clean",
     image: "https://picsum.photos/300/200?random=6",
   },
 ];

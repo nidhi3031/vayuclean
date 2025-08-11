@@ -12,7 +12,6 @@ const Home = () => {
   return (
     <div>
       <ScrollToTop />
-      <Header />
       <Banner />
       <ProductLine />
       <ProductSlider />

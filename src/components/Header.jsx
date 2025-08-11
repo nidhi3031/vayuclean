@@ -8,6 +8,25 @@ import PrimaryButton from "./PrimaryButton";
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const HeaderLink = [
+    {
+      name: "Home",
+      to: "/",
+    },
+    {
+      name: "About Us",
+      to: "/about",
+    },
+    {
+      name: "Products",
+      to: "/products",
+    },
+    {
+      name: "Contact Us",
+      to: "/Contact",
+    },
+  ];
+
   return (
     <nav className="bg-white shadow-md py-2 px-6 flex items-center justify-between fixed w-full top-0 z-50">
       {/* Logo */}
@@ -17,18 +36,11 @@ const Header = () => {
 
       {/* Desktop Menu */}
       <div className="hidden md:flex gap-6 text-gray-800 font-medium">
-        <Link to="/" className="hover:text-blue-500">
-          Home
-        </Link>
-        <Link to="/about" className="hover:text-blue-500">
-          About Us
-        </Link>
-        <Link to="/products" className="hover:text-blue-500">
-          Products
-        </Link>
-        <Link to="/contact" className="hover:text-blue-500">
-          Contact Us
-        </Link>
+        {HeaderLink.map((link, index) => (
+          <Link to={link.to} key={index} className="hover:text-primary">
+            {link.name}
+          </Link>
+        ))}
       </div>
 
       {/* Mobile Menu Toggle Button */}
@@ -40,28 +52,24 @@ const Header = () => {
 
       {/* Get Quote Button */}
       <div className="hidden md:block">
-        <PrimaryButton>Get Quote</PrimaryButton>
+        <PrimaryButton to="/contact">Get Quote</PrimaryButton>
       </div>
 
       {/* Mobile Dropdown Menu */}
       {isOpen && (
-        <div className="absolute top-20 left-0 w-full bg-white shadow-md flex flex-col items-start px-6 py-4 gap-4 text-gray-800 font-medium md:hidden z-40">
-          <Link to="/" className="hover:text-blue-500">
-            Home
-          </Link>
-          <Link to="/about" className="hover:text-blue-500">
-            About Us
-          </Link>
-          <Link to="/products" className="hover:text-blue-500">
-            Products
-          </Link>
-          <Link to="/contact" className="hover:text-blue-500">
-            Contact Us
-          </Link>
-          <button className="bg-cyan-400 hover:bg-cyan-500 text-white px-6 py-2 rounded-full font-semibold w-[40%]">
-            Get Quote
-          </button>
-          <PrimaryButton>Get Quote</PrimaryButton>
+        <div className="absolute top-16 left-0 w-full bg-white shadow-md flex flex-col items-start px-6 py-4 gap-4 text-gray-800 font-medium md:hidden z-40">
+          {HeaderLink.map((link, index) => (
+            <Link
+              to={link.to}
+              key={index}
+              onClick={() => setIsOpen(false)}
+              className="hover:text-primary"
+            >
+              {link.name}
+            </Link>
+          ))}
+
+          <PrimaryButton to="/conatct">Get Quote</PrimaryButton>
         </div>
       )}
     </nav>

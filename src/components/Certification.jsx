@@ -22,7 +22,7 @@ const Certification = () => {
       </div>
 
       {/* Top Feature Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-2 text-center mb-12 px-24">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-2 text-center mb-12 md:px-24">
         {/* Card 1 */}
         <div className="p-8  rounded-xl hover:bg-gray transition">
           <BadgeCheck className="w-16 h-16 mx-auto text-primary" />
