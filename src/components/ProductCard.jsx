@@ -1,16 +1,11 @@
 // src/components/ProductCard.jsx
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import Description from "./Description";
+import { categories } from "../utils/products";
 
-const ProductCard = ({ product }) => {
-  const navigate = useNavigate();
-
+const ProductCard = ({ product, categories }) => {
   return (
-    <div
-      onClick={() => navigate(`/products/${product.slug}`)}
-      className="cursor-pointer bg-white rounded-lg shadow-md hover:shadow-lg transition p-4 text-left h-f"
-    >
+    <div className="cursor-pointer bg-white rounded-lg shadow-md hover:shadow-lg transition p-4 text-left h-full">
       <img
         src={product.image}
         alt={product.name}

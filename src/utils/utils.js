@@ -12,6 +12,13 @@ import LogoTwo from "../assets/growin-logo.svg";
 
 const HomeHeroBannerImg = [VayuBanner, VayuBanner];
 
+export const NavLinks = [
+  { name: "Home", path: "/" },
+  { name: "About Us", path: "/about" },
+  { name: "Products", path: "/categories" },
+  { name: "Contact Us", path: "/contact" },
+];
+
 export {
   BgCta,
   Blacklogo,

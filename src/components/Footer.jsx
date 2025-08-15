@@ -1,6 +1,8 @@
 import Section from "./Section";
 
-import { Blacklogo, LogoTwo } from "../utils/utils";
+import { Blacklogo, LogoTwo, NavLinks } from "../utils/utils";
+import { categories } from "../utils/products";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -12,45 +14,29 @@ const Footer = () => {
           className="max-w-7xl w-40 mb-8"
         />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-6">
-          {/* Empty Logo Space + Quick Links below */}
           <div>
-            {/* Empty div to reserve space for logo */}
             <div className="w-40"></div>
 
             {/* Quick Links below the empty space */}
             <h4 className="text-lg font-semibold mb-3">Quick Links</h4>
             <ul className="space-y-1 text-md text-white">
-              <li className="hover:text-primary cursor-pointer">Home</li>
-              <li className="hover:text-primary cursor-pointer">About Us</li>
-              <li className="hover:text-primary cursor-pointer">
-                Our Products
-              </li>
-              <li className="hover:text-primary cursor-pointer">
-                Industries We Serve
-              </li>
-              <li className="hover:text-primary cursor-pointer">
-                Testimonials
-              </li>
-              <li className="hover:text-primary cursor-pointer">Contact Us</li>
+              {NavLinks.map((link, index) => (
+                <li key={index} className="hover:text-primary cursor-pointer">
+                  <Link to={link.path}> {link.name}</Link>
+                </li>
+              ))}
             </ul>
           </div>
 
           {/* Products */}
           <div>
-            <h4 className="text-lg font-semibold mb-3">Products</h4>
+            <h4 className="text-lg font-semibold mb-3">Product Categories</h4>
             <ul className="space-y-1 text-md text-white">
-              <li className="hover:text-primary cursor-pointer">
-                Tablet Compression Machines
-              </li>
-              <li className="hover:text-primary cursor-pointer">
-                Capsule Filling Machines
-              </li>
-              <li className="hover:text-primary cursor-pointer">
-                Packaging & Blistering Machines
-              </li>
-              <li className="hover:text-primary cursor-pointer">
-                Pharmaceutical Manufacturing Solutions
-              </li>
+              {categories.map((item, index) => (
+                <li key={index} className="hover:text-primary cursor-pointer">
+                  <Link to={`category/${item.slug}`}>{item.name}</Link>
+                </li>
+              ))}
             </ul>
           </div>
 

@@ -1,5 +1,6 @@
 // src/utils/products.js
 
+import { list } from "postcss";
 import { Customer, VayuBanner } from "./utils";
 
 export const products = [
@@ -9,8 +10,38 @@ export const products = [
     slug: "laminar-air-flow-unit",
     description:
       "Widely used in microbiology labs, quality control, and aseptic processing.",
-    category: "Electronics",
+    category: "Laminar Air Flow",
     image: VayuBanner,
+    list: [
+      {
+        title: "Test List",
+        description: "This is a test list item",
+      },
+      {
+        title: "Test List",
+        description: "This is a test list item",
+      },
+      {
+        title: "Test List",
+        description: "This is a test list item",
+      },
+      {
+        title: "Test List",
+        description: "This is a test list item",
+      },
+      {
+        title: "Test List",
+        description: "This is a test list item",
+      },
+      {
+        title: "Test List",
+        description: "This is a test list item",
+      },
+      {
+        title: "Test List",
+        description: "This is a test list item",
+      },
+    ],
   },
   {
     id: 2,
@@ -18,8 +49,38 @@ export const products = [
     slug: "air-handling-unit",
     description:
       "Controls air flow and quality in cleanrooms with high efficiency.",
-    category: "Wearables",
+    category: "Laminar Air Flow",
     image: "https://picsum.photos/300/200?random=2",
+    list: [
+      {
+        title: "Test List",
+        description: "This is a test list item",
+      },
+      {
+        title: "Test List",
+        description: "This is a test list item",
+      },
+      {
+        title: "Test List",
+        description: "This is a test list item",
+      },
+      {
+        title: "Test List",
+        description: "This is a test list item",
+      },
+      {
+        title: "Test List",
+        description: "This is a test list item",
+      },
+      {
+        title: "Test List",
+        description: "This is a test list item",
+      },
+      {
+        title: "Test List",
+        description: "This is a test list item",
+      },
+    ],
   },
   {
     id: 3,
@@ -27,8 +88,39 @@ export const products = [
     slug: "modular-cleanroom",
     description:
       "Custom cleanroom structures designed for pharmaceutical environments.",
-    category: "Computers",
+    category: "Laminar Air Flow",
     image: "https://picsum.photos/300/200?random=3",
+    list: [
+      {
+        title: "Test List",
+        description:
+          "This is a test list item lorem ipsum dolor sit amet consectetur adipisicing elit. lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      },
+      {
+        title: "Test List",
+        description: "This is a test list item",
+      },
+      {
+        title: "Test List",
+        description: "This is a test list item",
+      },
+      {
+        title: "Test List",
+        description: "This is a test list item",
+      },
+      {
+        title: "Test List",
+        description: "This is a test list item",
+      },
+      {
+        title: "Test List",
+        description: "This is a test list item",
+      },
+      {
+        title: "Test List",
+        description: "This is a test list item",
+      },
+    ],
   },
   {
     id: 4,
@@ -38,6 +130,7 @@ export const products = [
       "Essential in handling biological samples, especially in R&D and diagnostics.",
     category: "Electronics",
     image: "https://picsum.photos/300/200?random=4",
+    list: [],
   },
   {
     id: 5,
@@ -47,6 +140,7 @@ export const products = [
       "Crucial for contamination-free material transfer in cleanroom environments.",
     category: "Photography",
     image: "https://picsum.photos/300/200?random=5",
+    list: [],
   },
   {
     id: 6,
@@ -56,6 +150,7 @@ export const products = [
       "High-demand pre-entry solution for particulate removal before entering clean zones.",
     category: "Furniture",
     image: "https://picsum.photos/300/200?random=6",
+    list: [],
   },
   {
     id: 7,
@@ -64,14 +159,70 @@ export const products = [
     description: "test description",
     category: "clean",
     image: "https://picsum.photos/300/200?random=6",
+    list: [
+      {
+        title: "Test List",
+        description: "This is a test list item",
+      },
+      {
+        title: "Test List",
+        description: "This is a test list item",
+      },
+      {
+        title: "Test List",
+        description: "This is a test list item",
+      },
+      {
+        title: "Test List",
+        description: "This is a test list item",
+      },
+      {
+        title: "Test List",
+        description: "This is a test list item",
+      },
+      {
+        title: "Test List",
+        description: "This is a test list item",
+      },
+      {
+        title: "Test List",
+        description: "This is a test list item",
+      },
+    ],
   },
 ];
 
 // ✅ Category list separately
+
 export const categories = [
-  "Electronics",
-  "Wearables",
-  "Computers",
-  "Photography",
-  "Furniture",
+  {
+    name: "Laminar Air Flow",
+    description: "This is a test list item",
+    image: "https://picsum.photos/300/200?random=6",
+    slug: "laminar-air-flow",
+  },
+  {
+    name: "Furniture",
+    description: "This is a test list item",
+    image: "https://picsum.photos/300/200?random=7",
+    slug: "furniture",
+  },
+  {
+    name: "Wearables",
+    description: "This is a test list item",
+    image: "https://picsum.photos/300/200?random=8",
+    slug: "wearables",
+  },
+  {
+    name: "Computers",
+    description: "This is a test list item",
+    image: "https://picsum.photos/300/200?random=9",
+    slug: "computers",
+  },
+  {
+    name: "clean",
+    description: "This is a test list item",
+    image: "https://picsum.photos/300/200?random=10",
+    slug: "clean",
+  },
 ];

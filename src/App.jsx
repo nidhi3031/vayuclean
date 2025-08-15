@@ -9,10 +9,11 @@ import Header from "./components/Header";
 import ScrollToTop from "./components/ScrollToTop";
 import About from "./Pages/About";
 import Home from "./Pages/Home";
-import Products from "./Pages/Products";
 import ProductDetail from "./Pages/ProductDetail";
 import ContactUs from "./Pages/ContactUs";
 import ComingSoon from "./Pages/ComingSoon";
+import CategoryList from "./Pages/CategoryList";
+import CategoryProducts from "./Pages/CategoryProducts";
 
 const App = () => {
   const lenis = useLenis(({ scroll }) => {
@@ -28,8 +29,15 @@ const App = () => {
           <Routes>
             <Route index element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route path="/products" element={<Products />} />
-            <Route path="/products/:slug" element={<ProductDetail />} />
+            <Route path="/categories" element={<CategoryList />} />
+            <Route
+              path="/category/:categorySlug"
+              element={<CategoryProducts />}
+            />
+            <Route
+              path="/category/:categorySlug/:slug"
+              element={<ProductDetail />}
+            />
             <Route path="/contact" element={<ContactUs />} />
             <Route path="/coming-soon" element={<ComingSoon />} />
           </Routes>

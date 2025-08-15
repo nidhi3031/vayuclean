@@ -7,9 +7,10 @@ import SectionTitle from "./SectionTitle";
 import PrimaryButton from "./PrimaryButton";
 import Section from "./Section";
 import ProductCard from "./ProductCard";
-import { products } from "../utils/products";
+import { categories, products } from "../utils/products";
 import "swiper/css";
 import "swiper/css/navigation";
+import { Link } from "react-router-dom";
 
 const ProductSlider = () => {
   const prevRef = useRef(null);
@@ -19,7 +20,7 @@ const ProductSlider = () => {
     <Section className="bg-gray overflow-hidden">
       <div className="text-center mb-10">
         <SectionTitle className="mb-6 text-center">
-          Our Product Line
+          Our Product Categories
         </SectionTitle>
         <Description className="lg:max-w-3xl mx-auto mb-5">
           Comprehensive solutions covering every aspect of pharmaceutical
@@ -50,15 +51,17 @@ const ProductSlider = () => {
           1280: { slidesPerView: 3 },
         }}
       >
-        {products.map((product, index) => (
+        {categories.map((product, index) => (
           <SwiperSlide key={index}>
-            <ProductCard key={product.id} product={product} />
+            <Link key={product.id} to={`/category/${product.slug}`}>
+              <ProductCard key={product.id} product={product} />
+            </Link>
           </SwiperSlide>
         ))}
       </Swiper>
 
       <div className="flex justify-between mt-5 md:mt-12">
-        <PrimaryButton to="/products"> View more</PrimaryButton>
+        <PrimaryButton to="/categories"> View more</PrimaryButton>
         <div className="flex items-center gap-2">
           <button
             ref={prevRef}

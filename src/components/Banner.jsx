@@ -47,7 +47,7 @@ const Banner = () => {
           support safe, compliant, and efficient pharmaceutical manufacturing.
         </Description>
         <div className="flex justify-center items-center gap-12 max-md:flex-col max-md:gap-6">
-          <PrimaryButton to="/products">Explore Products</PrimaryButton>
+          <PrimaryButton to="/categories">Explore Products</PrimaryButton>
           <a
             href="/catalogue.pdf"
             download

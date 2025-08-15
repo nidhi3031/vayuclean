@@ -2,30 +2,11 @@ import { Menu } from "lucide-react"; // or any icon library
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import VayuLogo from "../assets/vayulogo.svg"; // adjust path as needed
-import { LogoTwo } from "../utils/utils";
+import { LogoTwo, NavLinks } from "../utils/utils";
 import PrimaryButton from "./PrimaryButton";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-
-  const HeaderLink = [
-    {
-      name: "Home",
-      to: "/",
-    },
-    {
-      name: "About Us",
-      to: "/about",
-    },
-    {
-      name: "Products",
-      to: "/products",
-    },
-    {
-      name: "Contact Us",
-      to: "/Contact",
-    },
-  ];
 
   return (
     <nav className="bg-white shadow-md py-2 px-6 flex items-center justify-between fixed w-full top-0 z-50">
@@ -36,8 +17,8 @@ const Header = () => {
 
       {/* Desktop Menu */}
       <div className="hidden md:flex gap-6 text-gray-800 font-medium">
-        {HeaderLink.map((link, index) => (
-          <Link to={link.to} key={index} className="hover:text-primary">
+        {NavLinks.map((link, index) => (
+          <Link to={link.path} key={index} className="hover:text-primary">
             {link.name}
           </Link>
         ))}
@@ -58,9 +39,9 @@ const Header = () => {
       {/* Mobile Dropdown Menu */}
       {isOpen && (
         <div className="absolute top-16 left-0 w-full bg-white shadow-md flex flex-col items-start px-6 py-4 gap-4 text-gray-800 font-medium md:hidden z-40">
-          {HeaderLink.map((link, index) => (
+          {NavLinks.map((link, index) => (
             <Link
-              to={link.to}
+              to={link.path}
               key={index}
               onClick={() => setIsOpen(false)}
               className="hover:text-primary"

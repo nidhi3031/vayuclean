@@ -12,7 +12,7 @@ const Aboutabt = () => {
         {/* Overlay */}
 
         {/* Content */}
-        <div className="relative z-20 text-white px-6 sm:px-12 lg:max-w-3xl text-left pt-20">
+        <div className="relative z-20 text-white px-6 sm:px-12 lg:max-w-3xl text-center pt-20 mx-auto">
           <PrimaryHeading className="mb-4">
             Shaping the Future of Architecture
           </PrimaryHeading>
@@ -21,7 +21,7 @@ const Aboutabt = () => {
             We design environments that inspire innovation, performance, and
             sustainability.
           </Description>
-          <PrimaryButton to="/products" className="mb-4">
+          <PrimaryButton to="/categories" className="mb-4">
             Explore Our Products
           </PrimaryButton>
         </div>

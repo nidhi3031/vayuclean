@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { products } from "../utils/products";
 import { Card1 } from "../utils/utils";
 import PrimaryButton from "./PrimaryButton";
@@ -14,10 +15,15 @@ const ProductLine = () => {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-5 md:mb-12">
         {products.slice(0, 3).map((product) => (
-          <ProductCard key={product.id} product={product} />
+          <Link
+            key={product.id}
+            to={`/category/${product.category}/${product.slug}`}
+          >
+            <ProductCard key={product.id} product={product} />
+          </Link>
         ))}
       </div>
-      <PrimaryButton to="/products">View More</PrimaryButton>
+      <PrimaryButton to="/categories">View More</PrimaryButton>
     </Section>
   );
 };
